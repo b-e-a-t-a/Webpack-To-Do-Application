@@ -18,6 +18,7 @@ class App extends React.Component {
 					text: 'feed my cat'		
 				}]
 		};
+		this.removeItem = this.removeItem.bind(this);
 	}
 	addTodo(val){
 		const todo = {
@@ -27,7 +28,7 @@ class App extends React.Component {
 		const data = [...this.state.data, todo];
 		this.setState({data});
 	}
-	removeTodo(id) {
+	removeItem(id) {
 		const remainder = this.state.data.filter(todo => todo.id !== id);
 		this.setState({data: remainder});
 	}
@@ -39,7 +40,7 @@ class App extends React.Component {
 				tasksNr={this.state.data.length}
 				/>
 				<TodoList list={this.state.data}
-				removeTodo={this.removeTodo.bind(this)}
+				remove={this.removeItem.bind(this)}
 				/>
 			</div>
 		);
