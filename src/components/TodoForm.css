@@ -1,0 +1,16 @@
+.inputForm {
+	border: 1px solid #008000;
+	width: 250px;
+	font-size: 20px;
+	font-style: italic;
+	text-align: center;
+	color: #008000;
+}
+
+.inputButton {
+	border: 1px solid #008000;
+	font-size: 20px;
+	background-color: #008000;
+	color: white;
+	width: 60px;
+}
