@@ -1,0 +1,10 @@
+.title h1 {
+	text-transform: uppercase;
+	color: #003300;
+}
+.title p {
+	font-size: 20px;
+	color: #003300;
+	border-bottom: double #006600;
+	text-align: center;
+}

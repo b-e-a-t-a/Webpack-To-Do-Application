@@ -23,7 +23,7 @@ class App extends React.Component {
 				}],
 			value: ''
 		};
-		this.removeItem = this.removeItem.bind(this);
+		this.removeTodo = this.removeTodo.bind(this);
 	}
 	addTodo(val){
 		const todo = {
@@ -36,7 +36,7 @@ class App extends React.Component {
 	handleChange(event) {
 		this.setState({value: event.target.value});
 	}
-	removeItem(id) {
+	removeTodo(id) {
 		const remainder = this.state.data.filter(todo => todo.id !== id);
 		this.setState({data: remainder});
 	}
@@ -50,7 +50,7 @@ class App extends React.Component {
 				/>
 				<TodoList 
 					list={this.state.data}
-					remove={this.removeItem.bind(this)}
+					remove={this.removeTodo.bind(this)}
 				/>
 				<TodoForm
 					value={this.state.value}
